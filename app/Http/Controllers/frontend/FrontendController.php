@@ -41,5 +41,14 @@ class FrontendController extends Controller
     public function contactpage(){
         return view('frontend.contact');
     }
+    public function careerpage(){
+        return view('frontend.career');
+    }
+    public function clientpage(){
+        return view('frontend.client');
+    }
+    public function teampage(){
+        return view('frontend.team');
+    }
     
 }

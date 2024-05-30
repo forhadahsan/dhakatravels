@@ -29,6 +29,10 @@ Route::get('/guides', [FrontendController::class, 'guidepage'])->name('guide');
 Route::get('/testimonials', [FrontendController::class, 'testimonialpage'])->name('testimonial');
 
 Route::get('/contacts', [FrontendController::class, 'contactpage'])->name('contact');
+// footer link work route
+Route::get('/careers', [FrontendController::class, 'careerpage'])->name('career');
+Route::get('/clients', [FrontendController::class, 'clientpage'])->name('client');
+Route::get('/teams', [FrontendController::class, 'teampage'])->name('team');
 
 Auth::routes();
 

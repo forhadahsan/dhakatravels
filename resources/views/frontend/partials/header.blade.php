@@ -65,7 +65,8 @@
     <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
             <a href="{{url('/')}}" class="navbar-brand">
-                <h1 class="m-0 text-primary"><span class="text-dark">Dhaka </span>TRAVEL</h1>
+                {{-- <h1 class="m-0 text-primary"><span class="text-dark">Dhaka </span>TRAVEL</h1> --}}
+                <img src="{{asset('frontend/travelassets/img/logo1.jpeg')}}" alt="logo"  style="height: 80px; width: 250px;" >
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -79,13 +80,13 @@
                     <a href="{{ route('gallery')}}" class="nav-item nav-link">Gallery</a>
                     <a href="{{ route('package')}}" class="nav-item nav-link">Tour Packages</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu border-0 rounded-0 m-0">
-                            <a href="{{route('blog')}}" class="dropdown-item">Blog Grid</a>
-                            <a href="{{route('single')}}" class="dropdown-item">Blog Detail</a>
-                            <a href="{{route('destination') }}" class="dropdown-item">Destination</a>
-                            <a href="{{route('guide')}}" class="dropdown-item">Travel Guides</a>
-                            <a href="{{route('testimonial') }}" class="dropdown-item">Testimonial</a>
+                            <a href="{{ route('blog')}}" class="dropdown-item">Blog Grid</a>
+                            <a href="{{ route('single')}}" class="dropdown-item">Blog Detail</a>
+                            <a href="{{ route('destination')}}" class="dropdown-item">Destination</a>
+                            <a href="{{ route('guide')}}" class="dropdown-item">Travel Guides</a>
+                            <a href="{{ route('testimonial')}}" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
                     <a href="{{ route('contact')}}" class="nav-item nav-link">Contact</a>
