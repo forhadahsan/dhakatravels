@@ -3,7 +3,7 @@
     <a href="{{ url('admin/dashboard') }}" class="app-brand-link">
       <span class="app-brand-logo demo">
         <!-- <img src="{{ asset('frontend/img/logo.png') }}" alt=""> -->
-        <h5>PurpleLeafParaa</h5>
+        <h5>Dhaka Travels & Traders</h5>
       </span>
     </a>
 
@@ -26,10 +26,16 @@
     <li class="menu-header small text-uppercase">
       <span class="menu-header-text">Pages</span>
     </li>
-    <li class="menu-item {{ request()->is('admin/cadses*')? 'active' : '' }}">
-      <a href="{{ url('admin/cadses') }}" class="menu-link">
+    <li class="menu-item">
+      <a href="{{ url('admin/topheader') }}" class="menu-link">
         <i class="menu-icon tf-icons bx bxs-contact"></i>
-        <div data-i18n="Analytics">About</div>
+        <div data-i18n="Analytics"> Top Header</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="{{ url('admin/abouts') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bxs-contact"></i>
+        <div data-i18n="Analytics"> About Us</div>
       </a>
     </li>
     {{-- <li class="menu-item {{ request()->is('admin/teams*')? 'active' : '' }}">

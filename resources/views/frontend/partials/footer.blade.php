@@ -35,16 +35,15 @@
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
                     <a class="text-white-50 mb-2" href="{{ route('team')}}"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
                     <a class="text-white-50 mb-2" href="{{ route('client')}}"><i class="fa fa-angle-right mr-2"></i>Our Client </a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                    <a class="text-white-50 mb-2" href="{{ route('stories')}}"><i class="fa fa-angle-right mr-2"></i> Stories </a>
                     <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
                 <p><i class="fa fa-map-marker-alt mr-2"></i> House-21, Road-17, Block-C, Banani </p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+880 17 67890</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+880 17 6789088</p>
                 <p><i class="fa fa-envelope mr-2"></i>dhakatravels@gmail.com</p>
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
                 <div class="w-100">

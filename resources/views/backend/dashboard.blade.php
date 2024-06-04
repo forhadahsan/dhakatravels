@@ -22,7 +22,7 @@
             <div class="card-body pb-0 px-0 px-md-4">
               <img
                 src="{{asset('backend/assets/img/illustrations/man-with-laptop-light.png')}}"
-                height="140"
+                height="150"
                 alt="View Badge User"
                 data-app-dark-img="illustrations/man-with-laptop-dark.png"
                 data-app-light-img="illustrations/man-with-laptop-light.png"

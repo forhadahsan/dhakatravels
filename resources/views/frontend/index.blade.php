@@ -111,13 +111,13 @@
                         <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
                         <div class="row mb-4">
                             <div class="col-6">
-                                <img class="img-fluid" src="{{ asset('frontend/travelassets/img/about-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{asset('frontend/travelassets/img/about4.jpeg') }}" alt="">
                             </div>
                             <div class="col-6">
-                                <img class="img-fluid" src="{{ asset('frontend/travelassets/img/about-2.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{asset('frontend/travelassets/img/about3.jpg') }}" alt="">
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary mt-1">Book Now</a>
+                        {{-- <a href="" class="btn btn-primary mt-1">Book Now</a> --}}
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-1.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United States</h5>
+                            <h5 class="text-white"> Saudi Arabia </h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -190,7 +190,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-2.jpg' ) }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United Kingdom</h5>
+                            <h5 class="text-white">United Arab Emirates</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -199,7 +199,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-3.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Australia</h5>
+                            <h5 class="text-white">Kuwait</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -208,7 +208,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-4.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">India</h5>
+                            <h5 class="text-white">Oman</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -217,7 +217,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-5.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">South Africa</h5>
+                            <h5 class="text-white"> Qatar </h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -539,7 +539,7 @@
         <div class="container py-5">
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-                <h1>What Say Our Clients</h1>
+                <h1> Our Clients</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="text-center pb-4">

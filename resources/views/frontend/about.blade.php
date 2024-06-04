@@ -5,7 +5,7 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid page-header">
+    <div class="container-fluid page-header" style="height: 300px;">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-4 text-white text-uppercase">About</h3>
@@ -76,26 +76,81 @@
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5">
+            <h1 class="mb-4 text-center"> About Us </h1>
+            <div class="row my-3">
+                @foreach ($aboutpage as $item)
+                    <div class="max-w-md">
+                        <p class="text-wrap">
+
+                        {{ $item->top_content }}
+                        </p>
+                    </div>
+                @endforeach
+               
+
+                <div class="card col-md-4">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3>Manpower</h3>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3>Manpower</h3>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3>Manpower</h3>
+                        </div>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis error, perspiciatis corporis 
+                            voluptatibus dolore quia repudiandae nisi dolor aspernatur, rerum quibusdam asperiores id. 
+                            Cupiditate sint asperiores inventore maiores praesentium a.
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-md-4">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3>Manpower</h3>
+                        </div>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis error, perspiciatis corporis 
+                            voluptatibus dolore quia repudiandae nisi dolor aspernatur, rerum quibusdam asperiores id. 
+                            Cupiditate sint asperiores inventore maiores praesentium a.
+                        </p>
+                    </div>
+                </div>
+   
+            </div>
+
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{asset('frontend/travelassets/img/about1.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
                         <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-                        <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
+                        <h1 class="mb-3">We Provide Best Packages In Your Budget</h1>
                         <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
                         <div class="row mb-4">
                             <div class="col-6">
-                                <img class="img-fluid" src="img/about-1.jpg" alt="">
+                                <img class="img-fluid" src="{{asset('frontend/travelassets/img/about4.jpeg') }}" alt="">
                             </div>
                             <div class="col-6">
-                                <img class="img-fluid" src="img/about-2.jpg" alt="">
+                                <img class="img-fluid" src="{{asset('frontend/travelassets/img/about3.jpg') }}" alt="">
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary mt-1">Book Now</a>
+                        {{-- <a href="" class="btn btn-primary mt-1">Book Now</a> --}}
                     </div>
                 </div>
             </div>
