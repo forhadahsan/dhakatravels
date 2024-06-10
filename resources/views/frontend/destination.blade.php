@@ -3,45 +3,12 @@
 
 @section('main-container')
 
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="package.html" class="nav-item nav-link">Tour Packages</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                                <a href="destination.html" class="dropdown-item active">Destination</a>
-                                <a href="guide.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
 
 
     <!-- Header Start -->
     <div class="container-fluid page-header">
         <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 250px">
                 <h3 class="display-4 text-white text-uppercase">Destination</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
@@ -119,7 +86,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/destination-1.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United States</h5>
+                            <h5 class="text-dark">Saudi Arabic</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -128,7 +95,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/destination-2.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United Kingdom</h5>
+                            <h5 class="text-dark">Oman</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -137,7 +104,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/destination-3.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Australia</h5>
+                            <h5 class="text-dark">Quat</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -146,7 +113,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/destination-4.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">India</h5>
+                            <h5 class="text-dark">India</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -155,7 +122,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/destination-5.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">South Africa</h5>
+                            <h5 class="text-dark"> Iraque</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>
@@ -164,7 +131,7 @@
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="img/destination-6.jpg" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Indonesia</h5>
+                            <h5 class="text-dark">Indonesia</h5>
                             <span>100 Cities</span>
                         </a>
                     </div>

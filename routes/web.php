@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\FrontendController;
 use App\Http\Controllers\backend\TopheaderController;
 use App\Http\Controllers\backend\AboutController;
+use App\Http\Controllers\backend\ServiceController;
+use App\Http\Controllers\backend\GalleryController;
+use App\Http\Controllers\backend\PackageController;
+use App\Http\Controllers\backend\OurClientController;
+use App\Http\Controllers\backend\TeamController;
+use App\Http\Controllers\backend\StoryController;
+use App\Http\Controllers\backend\BlogController;
+use App\Http\Controllers\backend\TopDestinationController;
+use App\Http\Controllers\backend\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,15 +48,27 @@ Route::get('/teams', [FrontendController::class, 'teampage'])->name('team');
 Route::get('/stories', [FrontendController::class, 'storiespage'])->name('stories');
 
 Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('/admin')->middleware(['auth'])->group(function(){
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard']);
 // top header
 // Route::resourse('/topheader', [TopheaderController::class, 'tophead']);
 Route::resource('/topheader', TopheaderController::class);
 Route::resource('/abouts', AboutController::class);
+Route::resource('/services', ServiceController::class);
+Route::resource('/galleries', GalleryController::class);
+Route::resource('/packages', PackageController::class);
+Route::resource('/ourclients', OurClientController::class);
+Route::resource('/ourteams', TeamController::class);
+Route::resource('/stories', StoryController::class);
+Route::resource('/blogs', BlogController::class);
+Route::resource('/topdestination', TopDestinationController::class);
+Route::resource('/contacts', ContactController::class);
+
+
 
 
 

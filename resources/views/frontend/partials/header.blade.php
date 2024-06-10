@@ -11,18 +11,20 @@
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
+    <!-- Google Web Font  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+    <!-- Librarie  Stylesheet -->
     <link href="{{ asset('frontend/travelassets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/travelassets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Custom Bootstrap CSS -->
     <link href="{{ asset('frontend/travelassets/css/style.css') }}" rel="stylesheet">
 </head>
    <!-- Topbar Start -->
@@ -83,7 +85,7 @@
                      {{-- gallery  --}}
                     <a href="{{ route('gallery')}}" class="nav-item nav-link">Gallery</a>
                     <a href="{{ route('package')}}" class="nav-item nav-link">Tour Packages</a>
-                    <div class="nav-item dropdown">
+                    {{-- <div class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu border-0 rounded-0 m-0">
                             <a href="{{ route('blog')}}" class="dropdown-item">Blog Grid</a>
@@ -92,7 +94,7 @@
                             <a href="{{ route('guide')}}" class="dropdown-item">Travel Guides</a>
                             <a href="{{ route('testimonial')}}" class="dropdown-item">Testimonial</a>
                         </div>
-                    </div>
+                    </div> --}}
                     <a href="{{ route('contact')}}" class="nav-item nav-link">Contact</a>
                 </div>
             </div>

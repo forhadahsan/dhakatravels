@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('top_content')->nullable();
             $table->string('services')->nullable();
+            $table->string('service_content')->nullable();
             $table->string('mid_header')->nullable();
             $table->string('mid_content')->nullable();
             $table->string('image1')->nullable();

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="card">
+            <div class="card"  style="margin-top: 5%;">
                 <div class="card-header">
                     <h4>Edit & Update  
                         <a href="{{ route('topheader.index') }}" class="btn btn-danger float-end" style="margin-left: 65%">BACK</a>

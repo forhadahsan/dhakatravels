@@ -7,7 +7,7 @@
     <!-- Header Start -->
     <div class="container-fluid page-header" style="height: 300px;">
         <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 250px">
                 <h3 class="display-4 text-white text-uppercase">About</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
@@ -81,54 +81,27 @@
                 @foreach ($aboutpage as $item)
                     <div class="max-w-md">
                         <p class="text-wrap">
-
                         {{ $item->top_content }}
                         </p>
                     </div>
                 @endforeach
-               
-
-                <div class="card col-md-4">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h3>Manpower</h3>
+                @foreach ($aboutpage as $item)
+                    {{-- <div class="card col-md-4">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3> {{$item->services }}</h3>
+                            </div>
+                            <p class="card-text"> {{$item->service_content}}</p>
                         </div>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h3>Manpower</h3>
+                    </div> --}}
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                            <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                            <h5 class="mb-2">{{$item->services }}</h5>
+                            <p class="m-0">{{$item->service_content}}</p>
                         </div>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                </div>
-                <div class="card col-md-4">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h3>Manpower</h3>
-                        </div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis error, perspiciatis corporis 
-                            voluptatibus dolore quia repudiandae nisi dolor aspernatur, rerum quibusdam asperiores id. 
-                            Cupiditate sint asperiores inventore maiores praesentium a.
-                        </p>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <div class="card-body">
-                        <div class="card-title">
-                            <h3>Manpower</h3>
-                        </div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis error, perspiciatis corporis 
-                            voluptatibus dolore quia repudiandae nisi dolor aspernatur, rerum quibusdam asperiores id. 
-                            Cupiditate sint asperiores inventore maiores praesentium a.
-                        </p>
-                    </div>
-                </div>
-   
+                @endforeach
             </div>
 
             <div class="row">
@@ -140,8 +113,10 @@
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
                         <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-                        <h1 class="mb-3">We Provide Best Packages In Your Budget</h1>
-                        <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                    @foreach ($aboutpage as $item)
+                        <h1 class="mb-3"> {{$item->mid_header}}</h1>
+                        <p>{{ $item->mid_content }}</p>
+                    @endforeach
                         <div class="row mb-4">
                             <div class="col-6">
                                 <img class="img-fluid" src="{{asset('frontend/travelassets/img/about4.jpeg') }}" alt="">

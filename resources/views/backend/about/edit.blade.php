@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <div class="card">
+            <div class="card"  style="margin-top: 5%;">
                 <div class="card-header">
                     <h4>Edit & Update  
                         <a href="{{ route('abouts.index') }}" class="btn btn-danger float-end" style="margin-left: 65%">BACK</a>
@@ -26,6 +26,10 @@
                         <div class="form-group mb-3">
                             <label for=""> Services </label>
                             <input type="text" id="services" value="{{ $aboutpage->services }}" name="services" class="form-control" >
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for=""> Service Content </label>
+                            <input type="text" id="service_content" value="{{ $aboutpage->service_content }}" name="service_content" class="form-control" >
                         </div>
                         <div class="form-group mb-3">
                             <label for=""> Mid Header </label>

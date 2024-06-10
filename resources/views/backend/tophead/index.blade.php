@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card"  style="margin-top: 5%;">
                 <div class="card-header">
                     <h3> List   
                         <a href="{{ route('topheader.create') }}" class="btn btn-primary float-end" style="margin-left: 60%">Add </a>
@@ -36,7 +36,12 @@
                                     <a href="{{ route('topheader.edit', $item->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('topheader.destroy', $item->id) }}" class="btn btn-danger btn-sm">Delete</a>
+                                    <form action="{{ route('topheader.destroy', $item->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                    {{-- <a href="{{ route('topheader.destroy', $item->id) }}" class="btn btn-danger btn-sm">Delete</a> --}}
                                 </td>
                             </tr>
                             @endforeach

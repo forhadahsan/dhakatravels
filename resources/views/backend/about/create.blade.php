@@ -27,6 +27,10 @@
                             <input type="text" id="services" name="services" class="form-control" required>
                         </div>
                         <div class="form-group mb-3">
+                            <label for=""> Services Content </label>
+                            <input type="text" id="service_content" name="service_content" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
                             <label for=""> Mid Header </label>
                             <input type="text" id="mid_header" name="mid_header" class="form-control" required>
                         </div>

@@ -96,7 +96,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    {{-- <div class="container-fluid py-5">
         <div class="container pt-5">
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
@@ -117,17 +117,17 @@
                                 <img class="img-fluid" src="{{asset('frontend/travelassets/img/about3.jpg') }}" alt="">
                             </div>
                         </div>
-                        {{-- <a href="" class="btn btn-primary mt-1">Book Now</a> --}}
+                        <a href="" class="btn btn-primary mt-1">Book Now</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- About End -->
 
 
     <!-- Feature Start -->
-    <div class="container-fluid pb-5">
+    {{-- <div class="container-fluid pb-5">
         <div class="container pb-5">
             <div class="row">
                 <div class="col-md-4">
@@ -165,7 +165,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Feature End -->
 
 
@@ -177,16 +177,19 @@
                 <h1>Explore Top Destination</h1>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-1.jpg') }}" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white"> Saudi Arabia </h5>
-                            <span>100 Cities</span>
-                        </a>
+                @foreach ($distinationpage as $item)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="destination-item position-relative overflow-hidden mb-2">
+                            <img class="img-fluid" src="{{ asset('uploads/topdestination/'.$item->image) }}" alt="">
+                            <a class="destination-overlay text-white text-decoration-none" href="">
+                                <h5 class="text-white"> {{ $item->country_name }} </h5>
+                                <span> {{ $item->town }} </span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                @endforeach
+                
+                {{-- <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
                         <img class="img-fluid" src="{{ asset('frontend/travelassets/img/destination-2.jpg' ) }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
@@ -230,7 +233,7 @@
                             <span>100 Cities</span>
                         </a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -245,17 +248,19 @@
                 <h1>Tours & Travel Services</h1>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                @foreach ($servicepage as $item)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                            <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                            <h5 class="mb-2"> {{ $item->service_name }} </h5>
+                            <p class="m-0"> {{ $item->service_content }} </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                @endforeach
+                {{-- <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                        <h5 class="mb-2">Ticket Booking</h5>
+                                 <h5 class="mb-2">Ticket Booking</h5>
                         <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                     </div>
                 </div>
@@ -265,7 +270,7 @@
                         <h5 class="mb-2">Hotel Booking</h5>
                         <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                     </div>
-                </div>
+                </div>   --}}
             </div>
         </div>
     </div>
@@ -542,16 +547,19 @@
                 <h1> Our Clients</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
-                <div class="text-center pb-4">
-                    <img class="img-fluid mx-auto" src="{{ asset('frontend/travelassets/img/testimonial-1.jpg') }}" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
+                @foreach ($clientpage as $item)
+                    <div class="text-center pb-4">
+                        <img class="img-fluid mx-auto" src="{{asset('uploads/client/'.$item->image) }}" style="width: 100px; height: 100px;" >
+                        <div class="testimonial-text bg-white p-4 mt-n5">
+                            <p class="mt-5">
+                                {{ $item->title }}
+                            </p>
+                            <h5 class="text-truncate"> {{ $item->client_name }} </h5>
+                            <span>{{ $item->profession }}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="text-center">
+                @endforeach
+                {{-- <div class="text-center">
                     <img class="img-fluid mx-auto" src="{{ asset('frontend/travelassets/img/testimonial-2.jpg') }}" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
                         <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
@@ -577,7 +585,7 @@
                         <h5 class="text-truncate">Client Name</h5>
                         <span>Profession</span>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

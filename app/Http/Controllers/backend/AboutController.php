@@ -29,33 +29,24 @@ class AboutController extends Controller
         $aboutpage = new About;
         $aboutpage->top_content = $request->input('top_content');
         $aboutpage->services = $request->input('services');
+        $aboutpage->service_content = $request->input('service_content');
         $aboutpage->mid_header = $request->input('mid_header');
         $aboutpage->mid_content = $request->input('mid_content');
-        if ($request->hasFile('image1')) {
-            $file = $request->file('image1'); 
-            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-            $extension = $file->getClientOriginalExtension();
-
-            if (in_array($extension, $allowedExtensions)) { 
-                $filename = time() . '.' . $extension; 
-                $path = $file->storeAs('uploads/about', $filename, 'public'); 
-                $aboutpage->image1 = $filename;
-            } else {
-                return back()->withErrors(['image1' => 'Invalid file type. Only jpg, jpeg, png, and gif are allowed.']);
-            }
+        if($request->hasfile('image1'))
+        {
+            $file = $request->file('image1');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('uploads/gallery/', $filename);
+            $aboutpage->image1 = $filename;
         }
-        if ($request->hasFile('image2')) {
-            $file = $request->file('image2'); 
-            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-            $extension = $file->getClientOriginalExtension();
-
-            if (in_array($extension, $allowedExtensions)) { 
-                $filename = time() . '.' . $extension; 
-                $path = $file->storeAs('uploads/about', $filename, 'public'); 
-                $aboutpage->image2 = $filename;
-            } else {
-                return back()->withErrors(['image2' => 'Invalid file type. Only jpg, jpeg, png, and gif are allowed.']);
-            }
+        if($request->hasfile('image2'))
+        {
+            $file = $request->file('image2');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('uploads/gallery/', $filename);
+            $aboutpage->image2 = $filename;
         }
         $aboutpage->save();
         return redirect()->route('abouts.index');
@@ -84,10 +75,43 @@ class AboutController extends Controller
         $aboutpage = About::find($id);
         $aboutpage->top_content = $request->input('top_content');
         $aboutpage->services = $request->input('services');
+        $aboutpage->service_content = $request->input('service_content');
         $aboutpage->mid_header = $request->input('mid_header');
         $aboutpage->mid_content = $request->input('mid_content');
-        $aboutpage->image1 = $request->input('image1');
-        $aboutpage->image2 = $request->input('image2');
+        if ($request->hasFile('image1')) {
+            // Check if there's an old image and delete it
+            if ($aboutpage->image1) {
+                $oldImagePath = public_path('uploads/team/' . $aboutpage->image1);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+            // Upload the new image
+            $file = $request->file('image1');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/team/', $filename);
+    
+            // Update the image field in the database
+            $aboutpage->image1 = $filename;
+        }
+        if ($request->hasFile('image2')) {
+            // Check if there's an old image and delete it
+            if ($aboutpage->image2) {
+                $oldImagePath = public_path('uploads/team/' . $aboutpage->image2);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+            // Upload the new image
+            $file = $request->file('image2');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/team/', $filename);
+    
+            // Update the image field in the database
+            $aboutpage->image2 = $filename;
+        }
         $aboutpage->update();
         return redirect()->route('abouts.index');
     }
@@ -96,9 +120,9 @@ class AboutController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy($id)
-    {
-        $aboutpage = About::all();
-        $aboutpage->destroy();
+    {  
+        $aboutpage = About::find($id);
+        $aboutpage->delete();
         return redirect()->route('abouts.index');
     }
 }

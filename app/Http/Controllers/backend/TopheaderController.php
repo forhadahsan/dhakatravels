@@ -64,8 +64,9 @@ class TopheaderController extends Controller
      */
     public function destroy($id)
     {
-        $topheadedit = Tophead::all();
-        $topheadedit->destroy();
+        $topheadedit = Tophead::find($id);
+        $topheadedit->delete();
         return redirect()->route('topheader.index');
     }
+   
 }

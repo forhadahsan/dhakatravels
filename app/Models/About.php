@@ -12,6 +12,7 @@ class About extends Model
     protected $fillable = [ 
         'top_content',
         'services',
+        'service_content',
         'mid_header',
         'mid_content',
         'image1',

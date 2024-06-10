@@ -6,73 +6,92 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tophead;
 use App\Models\About;
+use App\Models\Service;
+use App\Models\Gallery;
+use App\Models\Ourclient;
+use App\Models\Story;
+use App\Models\Package;
+use App\Models\Team;
+use App\Models\Blog;
+use App\Models\TopDestination;
+
 
 class FrontendController extends Controller
 {
     public function indexpage() {
         $topheader = Tophead::all();
-        return view('frontend.index', compact('topheader'));
+        $servicepage = Service::all();
+        $clientpage = OurClient::all();
+        $distinationpage = TopDestination::all();
+        return view('frontend.index', compact('topheader','servicepage','clientpage','distinationpage'));
     }
     public function servicepage() {
         $topheader = Tophead::all();
-        return view('frontend.service', compact('topheader'));
+        $servicepage = Service::all();
+        return view('frontend.service', compact('topheader','servicepage'));
     }
 
     public function aboutpage(){
         $topheader = Tophead::all();
         $aboutpage = About::all();
-        return view('frontend.about', compact('topheader'));
+        return view('frontend.about', compact('topheader','aboutpage'));
     }
     public function gallerypage(){
         $topheader = Tophead::all();
-        return view('frontend.gallery', compact('topheader'));
+        $gallerypage = Gallery::all();
+        return view('frontend.gallery', compact('topheader','gallerypage'));
     }
     public function tourpackagepage(){
         $topheader = Tophead::all();
-        return view('frontend.package', compact('topheader'));
+        $packagepage = Package::all();
+        return view('frontend.package', compact('topheader','packagepage'));
     }
     public function blogpage(){
         $topheader = Tophead::all();
-        return view('frontend.blog', compact('topheader'));
+        $blogpage = Blog::all();
+        return view('frontend.blog', compact('topheader', 'blogpage'));
     }
     public function singlepage(){
         $topheader = Tophead::all();
         return view('frontend.single', compact('topheader'));
     }
     public function destinationpage(){
-        $destinationheader = Tophead::all();
-        return view('frontend.destination', compact('destinationheader'));
+        $topheader = Tophead::all();
+        return view('frontend.destination', compact('topheader'));
     }
     public function guidepage(){
-        $guideheader = Tophead::all();
-        return view('frontend.guide', compact('guideheader'));
+        $topheader = Tophead::all();
+        return view('frontend.guide', compact('topheader'));
     }
     public function testimonialpage(){
-        $testheader = Tophead::all();
-        return view('frontend.testimonial', compact('testheader'));
+        $topheader = Tophead::all();
+        return view('frontend.testimonial', compact('topheader'));
     }
 
 
 
     public function contactpage(){
-        $contactheader = Tophead::all();
-        return view('frontend.contact', compact('contactheader'));
+        $topheader = Tophead::all();
+        return view('frontend.contact', compact('topheader'));
     }
     public function careerpage(){
-        $careerheader = Tophead::all();
-        return view('frontend.career', compact('careerheader'));
+        $topheader = Tophead::all();
+        return view('frontend.career', compact('topheader'));
     }
     public function clientpage(){
-        $careerheader = Tophead::all();
-        return view('frontend.client', compact('careerheader'));
+        $topheader = Tophead::all();
+        $clientpage = OurClient::all();
+        return view('frontend.client', compact('topheader', 'clientpage'));
     }
     public function teampage(){
-        $teampageheader = Tophead::all();
-        return view('frontend.team', compact('teampageheader'));
+        $topheader = Tophead::all();
+        $teampage = Team::all();
+        return view('frontend.team', compact('topheader','teampage'));
     }
     public function storiespage(){
-        $storiespageheader = Tophead::all();
-        return view('frontend.story', compact('storiespageheader'));
+        $topheader = Tophead::all();
+        $storypage = Story::all();
+        return view('frontend.story', compact('topheader', 'storypage'));
     }
     
 }
